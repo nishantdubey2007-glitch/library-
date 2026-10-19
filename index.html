@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Complaint Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <header>
+        <h1>Complaint Management Portal</h1>
+
+        <!-- Navigation menu -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#register">Register</a>
+            <a href="#complaint">Submit Complaint</a>
+            <a href="#track">Track Complaint</a>
+            <a href="#admin">Admin Dashboard</a>
+        </nav>
+    </header>
+
+    <section id="home" class="box">
+        <h2>Welcome</h2>
+        <p>
+            This is a web portal where you can register a online complaint,
+            and also you can check a status and admin can solve that problem.
+            The main goal of this website id Transparency, Accountability and a farst resolution.
+        </p>
+
+        <h3>Main Features</h3>
+        <ul>
+            <li>User Registration</li>
+            <li>Complaint Submission (document / image ke saath)</li>
+            <li>Complaint Tracking</li>
+            <li>Department Management</li>
+            <li>Case Assignment</li>
+            <li>Status Updates &amp; Notifications</li>
+            <li>Reports aur Admin Dashboard</li>
+        </ul>
+    </section>
+
+
+    <!-- USER REGISTRATION SECTION .-->
+    <section id="register" class="box">
+        <h2>User Registration</h2>
+
+        <form>
+            <label>Full Name:</label>
+            <input type="text" placeholder="Apna naam likho">
+
+            <label>Email:</label>
+            <input type="email" placeholder="example@gmail.com">
+
+            <label>Phone Number:</label>
+            <input type="text" placeholder="10 digit number">
+
+            <label>Password:</label>
+            <input type="password" placeholder="Password banao">
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+
+    <!--COMPLAINT SUBMISSION SECTION  -->
+    <section id="complaint" class="box">
+        <h2>Submit a Complaint</h2>
+
+        <form>
+            <label>Complaint Title:</label>
+            <input type="text" placeholder="Short title likho">
+
+            <!-- Dropdown: category choose karne ke liye -->
+            <label>Category:</label>
+            <select>
+                <option>Select Category</option>
+                <option>Water Supply</option>
+                <option>Electricity</option>
+                <option>Road / Transport</option>
+                <option>Sanitation</option>
+                <option>Other</option>
+            </select>
+
+            <label>Description:</label>
+            <textarea rows="5" placeholder="Apni problem detail mein likho"></textarea>
+
+
+            <label>Upload Document / Image:</label>
+            <input type="file">
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </section>
+
+
+    <!--TRACK COMPLAINT SECTION -->
+    <section id="track" class="box">
+        <h2>Track Your Complaint</h2>
+
+        <form>
+            <label>Enter Complaint ID:</label>
+            <input type="text" placeholder="Jaise: CMP101">
+            <button type="submit">Track</button>
+        </form>
+
+        <!-- Example table (sample data) -->
+        <h3>Your Complaints</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>CMP101</td>
+                <td>Water leakage</td>
+                <td>Water Dept.</td>
+                <td class="pending">Pending</td>
+            </tr>
+            <tr>
+                <td>CMP102</td>
+                <td>Street light not working</td>
+                <td>Electricity Dept.</td>
+                <td class="progress">In Progress</td>
+            </tr>
+            <tr>
+                <td>CMP103</td>
+                <td>Garbage not collected</td>
+                <td>Sanitation Dept.</td>
+                <td class="resolved">Resolved</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <!--ADMIN DASHBOARD SECTION-->
+    <section id="admin" class="box">
+        <h2>Admin Dashboard</h2>
+
+        <!-- Upar ke 4 boxes: total counts dikhane ke liye -->
+        <div class="cards">
+            <div class="card">
+                <h3>25</h3>
+                <p>Total Complaints</p>
+            </div>
+            <div class="card">
+                <h3>8</h3>
+                <p>Pending</p>
+            </div>
+            <div class="card">
+                <h3>10</h3>
+                <p>In Progress</p>
+            </div>
+            <div class="card">
+                <h3>7</h3>
+                <p>Resolved</p>
+            </div>
+        </div>
+
+        <!-- complain manage -->
+        <h3>Manage Complaints</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Complaint</th>
+                <th>Priority</th>
+                <th>Assign To</th>
+                <th>Update Status</th>
+            </tr>
+            <tr>
+                <td>CMP101</td>
+                <td>Water leakage</td>
+                <td>High</td>
+                <td>
+                    <select>
+                        <option>Water Dept.</option>
+                        <option>Electricity Dept.</option>
+                        <option>Sanitation Dept.</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>Pending</option>
+                        <option>In Progress</option>
+                        <option>Resolved</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>CMP102</td>
+                <td>Street light not working</td>
+                <td>Medium</td>
+                <td>
+                    <select>
+                        <option>Electricity Dept.</option>
+                        <option>Water Dept.</option>
+                        <option>Sanitation Dept.</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>In Progress</option>
+                        <option>Pending</option>
+                        <option>Resolved</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <button>Save Changes</button>
+        <button>Generate Report</button>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Complaint Management Portal | Made by cse student</p>
+    </footer>
+
+</body>
+</html>
